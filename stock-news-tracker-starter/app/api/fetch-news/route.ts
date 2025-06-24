@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const NEWS_API_KEY = 'YOUR_NEWSAPI_KEY';
-const OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY';
+const NEWS_API_KEY = process.env.NEWS_API_KEY;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
